@@ -1,126 +1,22 @@
-import { useState } from "react"
-import { Menu, X, ChevronRight } from "lucide-react"
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
 
 export default function LandingPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const navItems = [
-    { label: "HOME", href: "#home" },
-    { label: "ABOUT", href: "#about" },
-    { label: "ONE STOP LIVING", href: "#living" },
-    { label: "FACILITY", href: "#facility" },
-    { label: "PRODUCT", href: "#product" },
-    { label: "PRICE LIST", href: "#price" },
-    { label: "LOCATION", href: "#location" },
-  ]
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Bar - Right Side */}
-      <nav className="fixed right-0 top-0 h-screen w-64 bg-gradient-to-b from-teal-900 to-teal-800 text-white p-8 z-50 hidden lg:flex flex-col justify-between">
-        <div>
-          <h2 className="text-sm font-bold mb-8 text-teal-200">NAVIGATION</h2>
-          <ul className="space-y-6">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="text-sm font-semibold hover:text-teal-200 transition-colors flex items-center gap-2"
-                >
-                  <ChevronRight size={16} />
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="text-xs text-teal-200 space-y-2">
-          <p>Masterpiece By</p>
-          <p className="font-bold text-white">Perumnas</p>
-          <p className="mt-4">Copyright © 2025</p>
-          <p className="font-bold">Samesta Mahata Serpong</p>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="lg:hidden fixed top-4 right-4 z-40 p-2 bg-teal-900 text-white rounded"
-      >
-        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed right-0 top-0 h-screen w-full bg-teal-900 text-white p-8 z-40 pt-16">
-          <ul className="space-y-4">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="text-sm font-semibold hover:text-teal-200 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      
+      <Navbar/>      
 
       {/* Main Content */}
       <main className="lg:mr-64">
         {/* Hero Section */}
-        <section
-          id="home"
-          className="min-h-screen bg-gradient-to-r from-gray-100 to-gray-50 flex items-center relative overflow-hidden"
-        >
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-teal-400 rounded-full blur-3xl"></div>
-          </div>
-
-          <div className="container mx-auto px-6 py-20 relative z-10 flex flex-col lg:flex-row items-center gap-12">
-            {/* Left Content */}
-            <div className="flex-1">
-              <div className="mb-6">
-                <div className="inline-block bg-teal-900 text-white px-4 py-2 rounded-lg mb-4">
-                  <p className="text-sm font-bold">SAMESTA MAHATA SERPONG</p>
-                </div>
-              </div>
-
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Transit Oriented Development
-              </h1>
-
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Hunian berkonsep TOD ini memiliki prinsip perencanaan kota yang mengintegrasikan kepada ruang. Memiliki
-                waktu luang untuk keluarga/beristrahat, pengurangan kemacetan dengan penggunaan kendaaan umum dan
-                pengembangan desain yang lebih "compact".
-              </p>
-
-              <button className="bg-teal-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-800 transition-colors">
-                Explore More
-              </button>
-            </div>
-
-            {/* Right Image */}
-            <div className="flex-1">
-              <div className="bg-gradient-to-br from-teal-100 to-teal-50 rounded-2xl p-8 h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🏢</div>
-                  <p className="text-teal-900 font-semibold">Modern Development</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero/>
 
         {/* About Section */}
         <section id="about" className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="bg-gradient-to-br from-teal-100 to-teal-50 rounded-2xl p-8 h-96 flex items-center justify-center">
+              <div className="bg-linear-to-br from-teal-100 to-teal-50 rounded-2xl p-8 h-96 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🌆</div>
                   <p className="text-teal-900 font-semibold">Urban Living</p>
@@ -168,7 +64,7 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section id="product" className="py-20 bg-gradient-to-r from-teal-900 to-teal-800 text-white">
+        <section id="product" className="py-20 bg-linear-to-r from-teal-900 to-teal-800 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Find Your Dream Home?</h2>
             <p className="text-lg mb-8 text-teal-100 max-w-2xl mx-auto">

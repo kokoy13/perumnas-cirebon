@@ -7,9 +7,9 @@ const CTA = () =>{
               Bergabunglah dengan ribuan penghuni yang telah puas di Samesta Cirebon Regency. 
               Rasakan pengalaman hidup modern dengan kemudahan akses di Samesta Cirebon Regency
             </p>
-            <button className="bg-white text-teal-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <a href="#contact" className="bg-white text-teal-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get in Touch
-            </button>
+            </a>
           </div>
         </section>
     )

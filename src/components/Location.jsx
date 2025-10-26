@@ -58,11 +58,10 @@ const Location = () => {
 
   return (
     <>
-      <section id="location" className="relative min-h-screen px-6 py-16 md:px-12 lg:px-20 bg-contain overflow-hidden"
+      <section id="location" className="relative min-h-screen px-6 py-16 md:px-12 lg:px-20 bg-cover lg:bg-contain overflow-hidden"
         style={{ 
             backgroundImage: `url(${Facility})`,
             backgroundAttachment: 'fixed',
-            // backgroundPosition: '-300px center'
          }}
       >
         {/* <div className="absolute bg-black/50 inset-0"></div> */}

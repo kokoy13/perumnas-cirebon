@@ -53,7 +53,7 @@ const Navbar = () =>{
             </div>
 
             <p className="text-xs font-bold text-teal-200">Copyright © 2025</p>
-            <p className="text-sm font-bold text-white">Samesta Mahata Serpong</p>
+            <p className="text-sm font-bold text-white">Samesta Cirebon Regency</p>
             </div>
         </nav>
 

@@ -1,5 +1,7 @@
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import About from "./components/About"
+import map from "./assets/img/map.png"
 
 export default function LandingPage() {
   return (
@@ -13,33 +15,10 @@ export default function LandingPage() {
         <Hero/>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="bg-linear-to-br from-teal-100 to-teal-50 rounded-2xl p-8 h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🌆</div>
-                  <p className="text-teal-900 font-semibold">Urban Living</p>
-                </div>
-              </div>
+        <About/>
 
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">One Stop Living</h2>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  Konsep hunian terintegrasi transportasi yang menghadirkan kemudahan akses ke berbagai fasilitas publik
-                  dan privat. Lokasi premium berada di jalan boulevard, tol Jakarta-Serpong dan hanya 5 menit dari
-                  distrik baru bernilai tinggi.
-                </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Memiliki waktu luang untuk keluarga/beristrahat, pengurangan kemacetan dengan penggunaan kendaaan umum
-                  dan pengembangan desain yang lebih "compact" menjadi poin penting dalam pembangunan hunian ini.
-                </p>
-                <button className="bg-teal-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-800 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
+        <section id="living" className="w-full">
+          <img src={map} alt="" />
         </section>
 
         {/* Features Section */}

@@ -2,6 +2,7 @@ import hero from "../assets/img/hero-bg.png"
 import iconHero from "../assets/img/icon-color.png"
 import bumn from "../assets/img/bumn.png"
 import perumnas from "../assets/img/perumnas.png"
+import { Search } from "lucide-react"
 
 const Hero = () =>{
     return(
@@ -20,17 +21,19 @@ const Hero = () =>{
                 }}
             >
             </div>
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black/70"></div>
+
             {/* left */}
-            <div className="absolute hidden lg:block top-14 left-5">
-                <img className="w-48" src={bumn} alt="" />
+            <div className="absolute hidden lg:block top-10 left-5">
+                <img className="w-36" src={bumn} alt="" />
             </div>
             {/* middle */}
             <div className="absolute hidden lg:block top-5 left-[45%]">
-                <img className="w-48" src={iconHero} alt="" />
+                <img className="w-36" src={iconHero} alt="" />
             </div>
             {/* right */}
             <div className="absolute hidden lg:block top-10 right-20">
-                <img className="w-48" src={perumnas} alt="" />
+                <img className="w-36" src={perumnas} alt="" />
             </div>
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-teal-400 rounded-full blur-3xl"></div>
@@ -39,37 +42,31 @@ const Hero = () =>{
             <div className="container mx-auto px-6 py-20 relative z-10 flex flex-col lg:flex-row items-center gap-12"
                 
             >
-                {/* Left Content */}
-                <div className="flex-1">
-                <div className="mb-6">
-                    <div className="inline-block bg-teal-900 text-white px-4 py-2 rounded-lg mb-4">
-                    <p className="text-sm font-bold">SAMESTA MAHATA SERPONG</p>
+                {/* Hero Content */}
+                <div className="w-full">
+                    <div className="mb-6 flex justify-center">
+                        <div className="inline-block bg-linear-to-r from-teal-900 to-teal-800 text-white px-6 py-3 rounded-full mb-4">
+                            <p className="text-xs font-bold tracking-widest uppercase">Samesta Cirebon Regency</p>
+                        </div>
                     </div>
-                </div>
 
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-                    Transit Oriented Development
-                </h1>
+                    <h1 className="text-5xl text-center lg:text-6xl font-bold text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] mb-6 leading-tight">
+                        Samesta : Pesona Cirebon Regency
+                    </h1>
 
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Hunian berkonsep TOD ini memiliki prinsip perencanaan kota yang mengintegrasikan kepada ruang. Memiliki
-                    waktu luang untuk keluarga/beristrahat, pengurangan kemacetan dengan penggunaan kendaaan umum dan
-                    pengembangan desain yang lebih "compact".
-                </p>
-
-                <button className="bg-teal-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-800 transition-colors">
-                    Explore More
-                </button>
-                </div>
-
-                {/* Right Image */}
-                <div className="flex-1">
-                <div className="bg-linear-to-br from-teal-100 to-teal-50 rounded-2xl p-8 h-96 flex items-center justify-center">
-                    <div className="text-center">
-                    <div className="text-6xl mb-4">🏢</div>
-                    <p className="text-teal-900 font-semibold">Modern Development</p>
+                    <div className="flex justify-center">
+                        <p className="text-lg text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] max-w-3xl mb-8 leading-relaxed text-center">
+                            Pesona Cirebon Regency adalah proyek perumahan unggulan dari Perum Perumnas, 
+                            satu-satunya developer Badan Usaha Milik Negara (BUMN) di Cirebon. Berlokasi 
+                            strategis di Jl. Pesona Raya, Sendang, Kecamatan Sumber, Cirebon, Jawa Barat.
+                        </p>
                     </div>
-                </div>
+
+                    <div className="flex gap-3 justify-center">
+                        <a href="#about" className="bg-teal-900 hover:cursor-pointer text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-800 transition-colors">
+                            Explore More
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

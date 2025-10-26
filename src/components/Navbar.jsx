@@ -7,11 +7,11 @@ const Navbar = () =>{
     const navItems = [
         { label: "HOME", href: "#home" },
         { label: "ABOUT", href: "#about" },
-        { label: "ONE STOP LIVING", href: "#living" },
-        { label: "FACILITY", href: "#facility" },
-        { label: "PRODUCT", href: "#product" },
-        { label: "PRICE LIST", href: "#price" },
+        { label: "DISTRIBUTION", href: "#living" },
         { label: "LOCATION", href: "#location" },
+        { label: "PRODUCT", href: "#product" },
+        { label: "SITEPLAN", href: "#siteplan" },
+        { label: "CTA", href: "#cta" }
     ]
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,7 +19,7 @@ const Navbar = () =>{
 
     return(
       <>
-        <nav className="fixed right-0 top-0 h-screen w-80 bg-linear-to-b from-teal-900 via-teal-800 to-teal-900 text-white p-8 z-50 hidden lg:flex flex-col justify-between">
+        <nav className="fixed right-0 top-0 h-screen w-80 bg-linear-to-b from-teal-900 via-teal-800 to-teal-900 text-white p-8 z-50 hidden xl:flex flex-col justify-between">
             <div>
                 <div className="flex justify-center mb-12 pb-8 border-b border-teal-700">
                     <img className="w-80" src={icon} alt="" />
